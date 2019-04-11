@@ -6,10 +6,9 @@ target 'iNspireMe' do
   use_frameworks!
 
   # Pods for iNspireMe
-  pod 'MaterialKit'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
-  pod 'SwiftyJSON'
-  pod 'ChameleonFramework/Swift'
-
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'ChameleonFramework', '~> 2.1'
 end
+
