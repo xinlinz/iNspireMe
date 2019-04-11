@@ -21,4 +21,14 @@ class Quote: Equatable {
     static func == (lhs: Quote, rhs: Quote) -> Bool {
         return lhs.line == rhs.line
     }
+    
+    func convertToDictionary() -> [String: Any] {
+        var retDictionary = [String: Any]()
+        
+        retDictionary["line"] = self.line
+        retDictionary["photo"] = self.photo
+        
+        return retDictionary
+    }
+
 }

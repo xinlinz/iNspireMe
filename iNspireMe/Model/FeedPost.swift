@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class FeedPost {
     var user: User
     var time: Date!
@@ -18,4 +19,15 @@ class FeedPost {
         self.time = time
         self.quote = quote
     }
+    
+    func convertToDictionary() -> [String: Any] {
+        var retDictionary = [String: Any]()
+        
+        retDictionary["user"] = self.user
+        retDictionary["time"] = self.time
+        retDictionary["quote"] = self.quote
+        
+        return retDictionary
+    }
+
 }

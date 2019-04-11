@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UserProfileViewController: UIViewController {
     
@@ -17,7 +18,19 @@ class UserProfileViewController: UIViewController {
     }
     
     
-    @IBOutlet weak var
+    @IBAction func registerUser(_ sender: Any) {
+        let username = "alice"
+        let password = "password"
+        let u: User = User(username: username, password: password)
+        
+        db.collection("users").document(u.username).setData(u.convertToDictionary())  { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

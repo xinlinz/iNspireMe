@@ -8,6 +8,9 @@
 
 import Foundation
 import UIKit
+import Firebase
+
+let db = Firestore.firestore()
 
 class User: Equatable {
     var username: String!
@@ -17,9 +20,9 @@ class User: Equatable {
     var friends = [User]()
     var feedPosts = [Date: FeedPost]()
     
-    init(u: String, p: String) {
-        self.username = u
-        self.password = p // hash?
+    init(username: String, password: String) {
+        self.username = username
+        self.password = password // hash?
     }
     
     static func == (lhs: User, rhs: User) -> Bool {
@@ -52,6 +55,20 @@ class User: Equatable {
         let feedpost: FeedPost = FeedPost(user: self, time: t, quote: q)
         self.feedPosts[t] = feedpost
     }
+    
+    func convertToDictionary() -> [String: Any] {
+        var retDictionary = [String: Any]()
+        
+        retDictionary["username"] = self.username
+        retDictionary["password"] = self.password
+        retDictionary["profilePic"] = self.profilePic
+        retDictionary["favoriteQuotes"] = self.favoriteQuotes
+        retDictionary["friends"] = self.friends
+        retDictionary["feedPosts"] = self.feedPosts
+        
+        return retDictionary
+    }
+
 
     
     
