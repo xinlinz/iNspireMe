@@ -18,6 +18,7 @@
 		D6C8B834225EB48E0050D7CC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B833225EB48E0050D7CC /* Quote.swift */; };
 		D6C8B836225EB49A0050D7CC /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B835225EB49A0050D7CC /* FeedPost.swift */; };
 		D6C8B838225EBAD10050D7CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6C8B837225EBAD10050D7CC /* GoogleService-Info.plist */; };
+		D6C8B83A225EC26C0050D7CC /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B839225EC26C0050D7CC /* UserProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		D6C8B833225EB48E0050D7CC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		D6C8B835225EB49A0050D7CC /* FeedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
 		D6C8B837225EBAD10050D7CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D6C8B839225EC26C0050D7CC /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		F5E15B19D693E6BA862B7B6E /* Pods-iNspireMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNspireMe.debug.xcconfig"; path = "Target Support Files/Pods-iNspireMe/Pods-iNspireMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				D682B5A22249E1F9006DE7C5 /* LaunchScreen.storyboard */,
 				D682B5A52249E1F9006DE7C5 /* Info.plist */,
 				D6C8B837225EBAD10050D7CC /* GoogleService-Info.plist */,
+				D6C8B839225EC26C0050D7CC /* UserProfileViewController.swift */,
 			);
 			path = iNspireMe;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				D6C8B832225EB3CA0050D7CC /* User.swift in Sources */,
 				D682B59C2249E1F8006DE7C5 /* SecondViewController.swift in Sources */,
+				D6C8B83A225EC26C0050D7CC /* UserProfileViewController.swift in Sources */,
 				D682B5982249E1F8006DE7C5 /* AppDelegate.swift in Sources */,
 				D6C8B836225EB49A0050D7CC /* FeedPost.swift in Sources */,
 				D6C8B834225EB48E0050D7CC /* Quote.swift in Sources */,
