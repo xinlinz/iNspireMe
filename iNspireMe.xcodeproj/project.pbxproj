@@ -71,6 +71,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B1EF4E1022600E60007DCFB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D682B5992249E1F8006DE7C5 /* FirstViewController.swift */,
+				D6C8B839225EC26C0050D7CC /* UserProfileViewController.swift */,
+				D682B59B2249E1F8006DE7C5 /* SecondViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		D682B58B2249E1F8006DE7C5 = {
 			isa = PBXGroup;
 			children = (
@@ -92,16 +102,14 @@
 		D682B5962249E1F8006DE7C5 /* iNspireMe */ = {
 			isa = PBXGroup;
 			children = (
+				B1EF4E1022600E60007DCFB0 /* Controller */,
 				D6C8B82E225EB3220050D7CC /* Model */,
 				D682B5972249E1F8006DE7C5 /* AppDelegate.swift */,
-				D682B5992249E1F8006DE7C5 /* FirstViewController.swift */,
-				D682B59B2249E1F8006DE7C5 /* SecondViewController.swift */,
 				D682B59D2249E1F8006DE7C5 /* Main.storyboard */,
 				D682B5A02249E1F9006DE7C5 /* Assets.xcassets */,
 				D682B5A22249E1F9006DE7C5 /* LaunchScreen.storyboard */,
 				D682B5A52249E1F9006DE7C5 /* Info.plist */,
 				D6C8B837225EBAD10050D7CC /* GoogleService-Info.plist */,
-				D6C8B839225EC26C0050D7CC /* UserProfileViewController.swift */,
 			);
 			path = iNspireMe;
 			sourceTree = "<group>";
