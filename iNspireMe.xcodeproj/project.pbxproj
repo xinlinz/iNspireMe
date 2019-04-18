@@ -14,6 +14,7 @@
 		D682B59F2249E1F8006DE7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D682B59D2249E1F8006DE7C5 /* Main.storyboard */; };
 		D682B5A12249E1F9006DE7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D682B5A02249E1F9006DE7C5 /* Assets.xcassets */; };
 		D682B5A42249E1F9006DE7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D682B5A22249E1F9006DE7C5 /* LaunchScreen.storyboard */; };
+		D6AC840522669BAB008E0A5B /* LogInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC840422669BAB008E0A5B /* LogInTextField.swift */; };
 		D6C8B832225EB3CA0050D7CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B831225EB3CA0050D7CC /* User.swift */; };
 		D6C8B834225EB48E0050D7CC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B833225EB48E0050D7CC /* Quote.swift */; };
 		D6C8B836225EB49A0050D7CC /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B835225EB49A0050D7CC /* FeedPost.swift */; };
@@ -33,6 +34,7 @@
 		D682B5A02249E1F9006DE7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D682B5A32249E1F9006DE7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D682B5A52249E1F9006DE7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6AC840422669BAB008E0A5B /* LogInTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInTextField.swift; sourceTree = "<group>"; };
 		D6C8B831225EB3CA0050D7CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D6C8B833225EB48E0050D7CC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		D6C8B835225EB49A0050D7CC /* FeedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				D6C8B82E225EB3220050D7CC /* Model */,
 				D682B5972249E1F8006DE7C5 /* AppDelegate.swift */,
 				D682B59D2249E1F8006DE7C5 /* Main.storyboard */,
+				D6AC840422669BAB008E0A5B /* LogInTextField.swift */,
 				D682B5A02249E1F9006DE7C5 /* Assets.xcassets */,
 				D682B5A22249E1F9006DE7C5 /* LaunchScreen.storyboard */,
 				D682B5A52249E1F9006DE7C5 /* Info.plist */,
@@ -267,6 +270,7 @@
 				D6C8B83A225EC26C0050D7CC /* UserProfileViewController.swift in Sources */,
 				D682B5982249E1F8006DE7C5 /* AppDelegate.swift in Sources */,
 				D6C8B836225EB49A0050D7CC /* FeedPost.swift in Sources */,
+				D6AC840522669BAB008E0A5B /* LogInTextField.swift in Sources */,
 				D6C8B83C225ECF870050D7CC /* Mood.swift in Sources */,
 				D6C8B834225EB48E0050D7CC /* Quote.swift in Sources */,
 				D682B59A2249E1F8006DE7C5 /* FirstViewController.swift in Sources */,
