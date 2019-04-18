@@ -10,9 +10,8 @@ import UIKit
 import Firebase
 
 class LoginRegisterViewController: UIViewController {
-    
     @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: LoginTextField!
     
     var username = ""
     var password = ""
@@ -34,7 +33,6 @@ class LoginRegisterViewController: UIViewController {
     
     @IBAction func registerUser(_ sender: Any) {
         let u: User = User(username: username, password: password)
-        
         db.collection("users").document(u.username).setData(u.convertToDictionary())  { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -50,6 +48,7 @@ class LoginRegisterViewController: UIViewController {
         } else {
             // failed to login user b/c username does not exist or incorrect password
             // maybe print out a message later
+            loginFailureAlert()
         }
     }
     
@@ -99,7 +98,7 @@ class LoginRegisterViewController: UIViewController {
                 self.friends = document.get("friends") as! [User]
                 self.feedPosts = document.get("feedPosts") as! [Date: FeedPost]
                 //user = User(username: username, password: password, profilePic: profilePic, favoriteQuotes: favoriteQuotes, friends: friends, feedPosts: feedPosts)
-                
+                // TODO: perform segue to user profile
             }
         }
     }
