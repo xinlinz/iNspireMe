@@ -1,4 +1,3 @@
-/
 //  TableViewCell.swift
 //  iNspireMe
 //
@@ -9,9 +8,13 @@
 import UIKit
 import Foundation
 
-class TableViewCell: UITableViewCell {
+class FriendTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var feedLabel: UILabel!
+    // cell contains pic, name, quote
+    
+    @IBOutlet weak var friendPic: UIImage!
+    @IBOutlet weak var friendName: UILabel!
+    @IBOutlet weak var friendQuote: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

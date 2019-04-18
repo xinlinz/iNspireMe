@@ -16,6 +16,7 @@ class User: Equatable {
     var username: String!
     var password: String!
     var profilePic: UIImage!
+    var quote: String!
     var favoriteQuotes = [Quote]()
     var friends = [User]()
     var feedPosts = [Date: FeedPost]()
@@ -38,6 +39,10 @@ class User: Equatable {
     
     static func == (lhs: User, rhs: User) -> Bool {
         return lhs.username == rhs.username
+    }
+    
+    func addQuote() {
+        // TODO: allow user to add their own quote
     }
     
     func addFavoriteQuote(q: Quote) {
@@ -88,6 +93,7 @@ class User: Equatable {
         retDictionary["favoriteQuotes"] = self.favoriteQuotes
         retDictionary["friends"] = self.friends
         retDictionary["feedPosts"] = self.feedPosts
+        retDictionary["quote"] = self.quote // FIXME?
         
         return retDictionary
     }

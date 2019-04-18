@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09C7ACE52268E76800C5F65B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7ACE42268E76800C5F65B /* TableViewCell.swift */; };
-		09C7ACE72268E7C800C5F65B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7ACE62268E7C800C5F65B /* TableViewController.swift */; };
+		09C7ACE52268E76800C5F65B /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7ACE42268E76800C5F65B /* FriendTableViewCell.swift */; };
+		09C7ACE72268E7C800C5F65B /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7ACE62268E7C800C5F65B /* UserProfileViewController.swift */; };
 		52BC1E43E29E7C490B8537C6 /* Pods_iNspireMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538AF770A38D21008569BC3D /* Pods_iNspireMe.framework */; };
 		D682B5982249E1F8006DE7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682B5972249E1F8006DE7C5 /* AppDelegate.swift */; };
 		D682B59A2249E1F8006DE7C5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682B5992249E1F8006DE7C5 /* FirstViewController.swift */; };
@@ -17,17 +17,19 @@
 		D682B5A12249E1F9006DE7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D682B5A02249E1F9006DE7C5 /* Assets.xcassets */; };
 		D682B5A42249E1F9006DE7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D682B5A22249E1F9006DE7C5 /* LaunchScreen.storyboard */; };
 		D6AC840522669BAB008E0A5B /* LogInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC840422669BAB008E0A5B /* LogInTextField.swift */; };
+		D6BC64D422690E3600A1B88C /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC64D322690E3600A1B88C /* FavoritesTableViewCell.swift */; };
+		D6BC64D622690E5400A1B88C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BC64D522690E5400A1B88C /* PostTableViewCell.swift */; };
 		D6C8B832225EB3CA0050D7CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B831225EB3CA0050D7CC /* User.swift */; };
 		D6C8B834225EB48E0050D7CC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B833225EB48E0050D7CC /* Quote.swift */; };
 		D6C8B836225EB49A0050D7CC /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B835225EB49A0050D7CC /* FeedPost.swift */; };
 		D6C8B838225EBAD10050D7CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6C8B837225EBAD10050D7CC /* GoogleService-Info.plist */; };
-		D6C8B83A225EC26C0050D7CC /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B839225EC26C0050D7CC /* UserProfileViewController.swift */; };
+		D6C8B83A225EC26C0050D7CC /* LoginRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B839225EC26C0050D7CC /* LoginRegisterViewController.swift */; };
 		D6C8B83C225ECF870050D7CC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B83B225ECF870050D7CC /* Mood.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09C7ACE42268E76800C5F65B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		09C7ACE62268E7C800C5F65B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		09C7ACE42268E76800C5F65B /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		09C7ACE62268E7C800C5F65B /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		538AF770A38D21008569BC3D /* Pods_iNspireMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNspireMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894568BFFFB8A612DDF8F987 /* Pods-iNspireMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNspireMe.release.xcconfig"; path = "Target Support Files/Pods-iNspireMe/Pods-iNspireMe.release.xcconfig"; sourceTree = "<group>"; };
 		D682B5942249E1F8006DE7C5 /* iNspireMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNspireMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,11 +41,13 @@
 		D682B5A32249E1F9006DE7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D682B5A52249E1F9006DE7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6AC840422669BAB008E0A5B /* LogInTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInTextField.swift; sourceTree = "<group>"; };
+		D6BC64D322690E3600A1B88C /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		D6BC64D522690E5400A1B88C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		D6C8B831225EB3CA0050D7CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D6C8B833225EB48E0050D7CC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		D6C8B835225EB49A0050D7CC /* FeedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
 		D6C8B837225EBAD10050D7CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D6C8B839225EC26C0050D7CC /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		D6C8B839225EC26C0050D7CC /* LoginRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterViewController.swift; sourceTree = "<group>"; };
 		D6C8B83B225ECF870050D7CC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		F5E15B19D693E6BA862B7B6E /* Pods-iNspireMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNspireMe.debug.xcconfig"; path = "Target Support Files/Pods-iNspireMe/Pods-iNspireMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,10 +85,12 @@
 			isa = PBXGroup;
 			children = (
 				D682B5992249E1F8006DE7C5 /* FirstViewController.swift */,
-				D6C8B839225EC26C0050D7CC /* UserProfileViewController.swift */,
-				09C7ACE42268E76800C5F65B /* TableViewCell.swift */,
 				D682B59B2249E1F8006DE7C5 /* SecondViewController.swift */,
-				09C7ACE62268E7C800C5F65B /* TableViewController.swift */,
+				D6C8B839225EC26C0050D7CC /* LoginRegisterViewController.swift */,
+				09C7ACE62268E7C800C5F65B /* UserProfileViewController.swift */,
+				09C7ACE42268E76800C5F65B /* FriendTableViewCell.swift */,
+				D6BC64D322690E3600A1B88C /* FavoritesTableViewCell.swift */,
+				D6BC64D522690E5400A1B88C /* PostTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,14 +278,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C8B832225EB3CA0050D7CC /* User.swift in Sources */,
+				D6BC64D422690E3600A1B88C /* FavoritesTableViewCell.swift in Sources */,
+				D6BC64D622690E5400A1B88C /* PostTableViewCell.swift in Sources */,
 				D682B59C2249E1F8006DE7C5 /* SecondViewController.swift in Sources */,
-				D6C8B83A225EC26C0050D7CC /* UserProfileViewController.swift in Sources */,
+				D6C8B83A225EC26C0050D7CC /* LoginRegisterViewController.swift in Sources */,
 				D682B5982249E1F8006DE7C5 /* AppDelegate.swift in Sources */,
 				D6C8B836225EB49A0050D7CC /* FeedPost.swift in Sources */,
 				D6AC840522669BAB008E0A5B /* LogInTextField.swift in Sources */,
-				09C7ACE72268E7C800C5F65B /* TableViewController.swift in Sources */,
+				09C7ACE72268E7C800C5F65B /* UserProfileViewController.swift in Sources */,
 				D6C8B83C225ECF870050D7CC /* Mood.swift in Sources */,
-				09C7ACE52268E76800C5F65B /* TableViewCell.swift in Sources */,
+				09C7ACE52268E76800C5F65B /* FriendTableViewCell.swift in Sources */,
 				D6C8B834225EB48E0050D7CC /* Quote.swift in Sources */,
 				D682B59A2249E1F8006DE7C5 /* FirstViewController.swift in Sources */,
 			);

@@ -1,114 +1,60 @@
 //
-//  UserProfileViewController.swift
+//  TableViewController.swift
 //  iNspireMe
 //
-//  Created by Xinlin Zhou on 4/10/19.
+//  Created by Anita Cu on 4/16/19.
 //  Copyright © 2019 Xinlin Zhou. All rights reserved.
 //
 
 import UIKit
-import Firebase
+import Foundation
 
-class UserProfileViewController: UIViewController {
-    
-    @IBOutlet weak var usernameTextField: UITextField!
-    
-    @IBOutlet weak var passwordTextField: UITextField!
-    
-    var username = ""
-    var password = ""
-    
-    //var profilePic: UIImage = UIImage
-    var favoriteQuotes: [Quote] = [Quote]()
-    var feedPosts: [Date: FeedPost] = [Date: FeedPost]()
-    var friends: [User] = [User]()
-    
+class UserProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var toggleButton: UISegmentedControl!
+    @IBOutlet weak var tableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        username = String(usernameTextField.text!)
-        password = String(passwordTextField.text!)
-        
-        // Do any additional setup after loading the view.
+    // TODO: pass on the current logged in user
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch toggleButton.selectedSegmentIndex {
+        case 2:
+            return 1
+            //return self.friends.count
+        case 1:
+            return 2
+            //return self.feedPosts.count
+        default:
+            return 3
+            //return self.favoriteQuotes.count
+        }
     }
     
-    
-    @IBAction func registerUser(_ sender: Any) {
-        let u: User = User(username: username, password: password)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        db.collection("users").document(u.username).setData(u.convertToDictionary())  { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
+        // 0 = favorites; quote
+        // 1 = my posts; date, quote
+        // 2 = friends; pic, name, quote
+        switch toggleButton.selectedSegmentIndex {
+        case 2:
+            if let friendCell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell", for: indexPath) as? FriendTableViewCell {
+                //cell.feedLabel.text = self.friends[indexPath.item]
+                return friendCell
             }
-        }
-    }
-    
-    @IBAction func tryLoginUser(_ sender: Any) {
-        if (checkLogin(username: username, password: password)) {
-            loginUser()
-        } else {
-            // failed to login user b/c username does not exist or incorrect password
-            // maybe print out a message later
-        }
-    }
-    
-    func checkLogin(username: String, password: String) -> Bool {
-        
-        let docRef = db.collection("users").document(username)
-        
-        var success = false
-        
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let dataDescription = document.data().map(String.init(describing:))
-                    ?? "nil"
-                print("Document data: \(dataDescription)")
-                let correctPassword = document.get("password") as! String
-                if (password == correctPassword) {
-                    success = true
-                } else {
-                    print("Incorrect password")
-                    success = false
-                }
-            } else {
-                print("Username does not exist")
+            return UITableViewCell()
+        case 1:
+            //var sortedFeedPosts = Array(self.feedPosts.keys).sort(<)
+            if let postCell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell", for: indexPath) as? PostTableViewCell {
+                //cell.feedLabel.text = sortedFeedPosts[indexPath.item]
+                 return postCell
             }
-        }
-        return success
-    }
-    
-    func loginUser() {
-        // logs user into their profile page and displays profile page view
-        let docRef = db.collection("users").document(username)
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let dataDescription = document.data().map(String.init(describing:))
-                    ?? "nil"
-                print("Document data: \(dataDescription)")
-                //let username = document.get("username") as! String
-                //let password = document.get("password") as! String
-                let profilePic = document.get("profilePic") as! UIImage
-                self.favoriteQuotes = document.get("favoriteQuotes") as! [Quote]
-                self.friends = document.get("friends") as! [User]
-                self.feedPosts = document.get("feedPosts") as! [Date: FeedPost]
-                //user = User(username: username, password: password, profilePic: profilePic, favoriteQuotes: favoriteQuotes, friends: friends, feedPosts: feedPosts)
-                
+            return UITableViewCell()
+        default:
+            if let favoritesCell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell", for: indexPath) as? FavoritesTableViewCell {
+                //cell.feedLabel.text = self.favoriteQuotes[indexPath.item]
+                return favoritesCell
             }
+            return UITableViewCell()
         }
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
