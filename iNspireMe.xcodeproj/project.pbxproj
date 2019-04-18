@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09C7ACE52268E76800C5F65B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7ACE42268E76800C5F65B /* TableViewCell.swift */; };
+		09C7ACE72268E7C800C5F65B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C7ACE62268E7C800C5F65B /* TableViewController.swift */; };
 		52BC1E43E29E7C490B8537C6 /* Pods_iNspireMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538AF770A38D21008569BC3D /* Pods_iNspireMe.framework */; };
 		D682B5982249E1F8006DE7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682B5972249E1F8006DE7C5 /* AppDelegate.swift */; };
 		D682B59A2249E1F8006DE7C5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682B5992249E1F8006DE7C5 /* FirstViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09C7ACE42268E76800C5F65B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		09C7ACE62268E7C800C5F65B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		538AF770A38D21008569BC3D /* Pods_iNspireMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iNspireMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		894568BFFFB8A612DDF8F987 /* Pods-iNspireMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNspireMe.release.xcconfig"; path = "Target Support Files/Pods-iNspireMe/Pods-iNspireMe.release.xcconfig"; sourceTree = "<group>"; };
 		D682B5942249E1F8006DE7C5 /* iNspireMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNspireMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +82,9 @@
 			children = (
 				D682B5992249E1F8006DE7C5 /* FirstViewController.swift */,
 				D6C8B839225EC26C0050D7CC /* UserProfileViewController.swift */,
+				09C7ACE42268E76800C5F65B /* TableViewCell.swift */,
 				D682B59B2249E1F8006DE7C5 /* SecondViewController.swift */,
+				09C7ACE62268E7C800C5F65B /* TableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 				D682B5982249E1F8006DE7C5 /* AppDelegate.swift in Sources */,
 				D6C8B836225EB49A0050D7CC /* FeedPost.swift in Sources */,
 				D6AC840522669BAB008E0A5B /* LogInTextField.swift in Sources */,
+				09C7ACE72268E7C800C5F65B /* TableViewController.swift in Sources */,
 				D6C8B83C225ECF870050D7CC /* Mood.swift in Sources */,
+				09C7ACE52268E76800C5F65B /* TableViewCell.swift in Sources */,
 				D6C8B834225EB48E0050D7CC /* Quote.swift in Sources */,
 				D682B59A2249E1F8006DE7C5 /* FirstViewController.swift in Sources */,
 			);

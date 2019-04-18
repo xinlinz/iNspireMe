@@ -20,9 +20,20 @@ class User: Equatable {
     var friends = [User]()
     var feedPosts = [Date: FeedPost]()
     
+    // Used when registering a User with only username + password
     init(username: String, password: String) {
         self.username = username
         self.password = password // hash?
+    }
+    
+    // Used to reconstruct an existing User object
+    init(username: String, password: String, profilePic: UIImage, favoriteQuotes: [Quote], friends: [User], feedPosts: [Date: FeedPost]) {
+        self.username = username
+        self.password = password
+        self.profilePic = profilePic
+        self.favoriteQuotes = favoriteQuotes
+        self.friends = friends
+        self.feedPosts = feedPosts
     }
     
     static func == (lhs: User, rhs: User) -> Bool {
@@ -41,6 +52,10 @@ class User: Equatable {
         }
     }
     
+    func getFavoriteQuotes() -> [Quote] {
+        return self.favoriteQuotes
+    }
+    
     func setProfilePic(pic: UIImage) {
         self.profilePic = pic
     }
@@ -51,9 +66,17 @@ class User: Equatable {
         }
     }
     
+    func getFriends() -> [User] {
+        return self.friends
+    }
+    
     func makeFeedPost(t: Date, q: Quote) {
         let feedpost: FeedPost = FeedPost(user: self, time: t, quote: q)
         self.feedPosts[t] = feedpost
+    }
+    
+    func getFeedPosts() -> [Date: FeedPost] {
+        return self.feedPosts
     }
     
     func convertToDictionary() -> [String: Any] {
@@ -68,8 +91,5 @@ class User: Equatable {
         
         return retDictionary
     }
-
-
-    
     
 }
