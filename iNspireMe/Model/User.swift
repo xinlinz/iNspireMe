@@ -15,23 +15,24 @@ let db = Firestore.firestore()
 class User: Equatable {
     var username: String!
     var password: String!
-    var profilePic: UIImage!
+    //var profilePic: UIImage!
     var quote: String!
     var favoriteQuotes = [Quote]()
     var friends = [User]()
-    var feedPosts = [Date: FeedPost]()
+    var feedPosts = [FeedPost]()
     
     // Used when registering a User with only username + password
     init(username: String, password: String) {
         self.username = username
         self.password = password // hash?
+        //self.profilePic = UIImage(named: "guest.jpg")
     }
     
     // Used to reconstruct an existing User object
-    init(username: String, password: String, profilePic: UIImage, favoriteQuotes: [Quote], friends: [User], feedPosts: [Date: FeedPost]) {
+    init(username: String, password: String, favoriteQuotes: [Quote], friends: [User], feedPosts: [FeedPost]) {
         self.username = username
         self.password = password
-        self.profilePic = profilePic
+        //self.profilePic = profilePic
         self.favoriteQuotes = favoriteQuotes
         self.friends = friends
         self.feedPosts = feedPosts
@@ -60,10 +61,10 @@ class User: Equatable {
     func getFavoriteQuotes() -> [Quote] {
         return self.favoriteQuotes
     }
-    
-    func setProfilePic(pic: UIImage) {
-        self.profilePic = pic
-    }
+//
+//    func setProfilePic(pic: UIImage) {
+//        self.profilePic = pic
+//    }
     
     func addFriend(user: User) {
         if (!self.friends.contains(user)) {
@@ -77,10 +78,10 @@ class User: Equatable {
     
     func makeFeedPost(t: Date, q: Quote) {
         let feedpost: FeedPost = FeedPost(user: self, time: t, quote: q)
-        self.feedPosts[t] = feedpost
+        self.feedPosts.append(feedpost)
     }
     
-    func getFeedPosts() -> [Date: FeedPost] {
+    func getFeedPosts() -> [FeedPost] {
         return self.feedPosts
     }
     
@@ -89,7 +90,7 @@ class User: Equatable {
         
         retDictionary["username"] = self.username
         retDictionary["password"] = self.password
-        retDictionary["profilePic"] = self.profilePic
+        //retDictionary["profilePic"] = self.profilePic
         retDictionary["favoriteQuotes"] = self.favoriteQuotes
         retDictionary["friends"] = self.friends
         retDictionary["feedPosts"] = self.feedPosts

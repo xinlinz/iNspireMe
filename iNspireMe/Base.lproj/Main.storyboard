@@ -131,7 +131,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-877"/>
+            <point key="canvasLocation" x="817" y="-877"/>
         </scene>
         <!--Third-->
         <scene sceneID="NeT-bb-dGY">
@@ -174,7 +174,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="Alice" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNB-jJ-z0X" customClass="LoginTextField" customModule="iNspireMe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNB-jJ-z0X" customClass="LoginTextField" customModule="iNspireMe" customModuleProvider="target">
                                 <rect key="frame" x="33" y="429.33333333333331" width="309" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="n0B-TI-e99"/>
@@ -189,7 +189,7 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" text="Alice" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1T-0y-tsb" customClass="LoginTextField" customModule="iNspireMe" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r1T-0y-tsb" customClass="LoginTextField" customModule="iNspireMe" customModuleProvider="target">
                                 <rect key="frame" x="33" y="489.33333333333326" width="309" height="50"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -258,9 +258,10 @@
                         <viewLayoutGuide key="safeArea" id="O3G-uW-BcP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" selectedImage="profile" id="qtK-s4-DU0"/>
+                    <navigationItem key="navigationItem" id="lA6-ni-Mv7"/>
                     <connections>
-                        <outlet property="passwordTextField" destination="r1T-0y-tsb" id="78f-7x-YUd"/>
-                        <outlet property="usernameTextField" destination="hNB-jJ-z0X" id="B7m-Nc-7SR"/>
+                        <outlet property="passwordTextField" destination="r1T-0y-tsb" id="QXd-PB-W03"/>
+                        <outlet property="usernameTextField" destination="hNB-jJ-z0X" id="wve-6J-peb"/>
                         <segue destination="eSt-uy-qgj" kind="show" identifier="successLogin" id="bpD-nc-ZJO"/>
                     </connections>
                 </viewController>
@@ -313,10 +314,10 @@
                                     <constraint firstAttribute="height" constant="495" id="5RG-aY-Oeu"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="74" id="Ejg-et-8Jt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="74" id="Ejg-et-8Jt" customClass="ProfileTableViewCell" customModule="iNspireMe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ejg-et-8Jt" id="FuH-wg-Ual">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ejg-et-8Jt" id="FuH-wg-Ual" customClass="FavoritesTableViewCell" customModule="iNspireMe" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="73.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -364,6 +365,11 @@
                                             <constraint firstItem="OBU-uY-VZu" firstAttribute="top" secondItem="Ejg-et-8Jt" secondAttribute="top" constant="11" id="GgW-aG-0bv"/>
                                             <constraint firstItem="hH8-zg-Xv2" firstAttribute="leading" secondItem="Ejg-et-8Jt" secondAttribute="leading" constant="15" id="hkC-Tf-NOj"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="bigText" destination="OBU-uY-VZu" id="57W-mj-9Cq"/>
+                                            <outlet property="date" destination="V2r-0K-LqT" id="cLu-mT-Vtr"/>
+                                            <outlet property="smallText" destination="0P9-xh-OGd" id="mLN-gj-5pi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -391,10 +397,17 @@
                         <viewLayoutGuide key="safeArea" id="X96-8R-Lf2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" selectedImage="profile" id="JtO-3a-grY"/>
+                    <navigationItem key="navigationItem" id="qS5-zp-AhC"/>
+                    <connections>
+                        <outlet property="quote" destination="sKn-O5-V86" id="f6G-hE-sBo"/>
+                        <outlet property="tableView" destination="GoT-gh-XQb" id="OJf-fx-Gos"/>
+                        <outlet property="toggleButton" destination="UBm-EK-4PA" id="6L4-5b-X1T"/>
+                        <outlet property="username" destination="roe-ym-G14" id="SRH-Em-HVq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYs-mn-gKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2096.8000000000002" y="827.58620689655174"/>
+            <point key="canvasLocation" x="2097" y="992"/>
         </scene>
     </scenes>
     <resources>

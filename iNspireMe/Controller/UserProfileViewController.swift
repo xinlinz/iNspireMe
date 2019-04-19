@@ -12,20 +12,25 @@ import Foundation
 class UserProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var toggleButton: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var quote: UILabel!
     
+    var curUser: User!
+    
+    override func viewDidLoad() {
+        username.text = curUser.username
+        quote.text = curUser.quote
+    }
     // TODO: pass on the current logged in user
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch toggleButton.selectedSegmentIndex {
         case 2:
-            return 1
-            //return self.friends.count
+            return curUser.getFriends().count
         case 1:
-            return 2
-            //return self.feedPosts.count
+            return curUser.getFeedPosts().count
         default:
-            return 3
-            //return self.favoriteQuotes.count
+            return curUser.getFavoriteQuotes().count
         }
     }
     
@@ -36,21 +41,27 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
         // 2 = friends; pic, name, quote
         switch toggleButton.selectedSegmentIndex {
         case 2:
-            if let friendCell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell", for: indexPath) as? FriendTableViewCell {
-                //cell.feedLabel.text = self.friends[indexPath.item]
+            if let friendCell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell", for: indexPath) as? ProfileTableViewCell {
+                let friend = curUser.friends[indexPath.item]
+                friendCell.bigText.text = friend.username
+                friendCell.smallText.text = friend.quote
                 return friendCell
             }
             return UITableViewCell()
         case 1:
             //var sortedFeedPosts = Array(self.feedPosts.keys).sort(<)
-            if let postCell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell", for: indexPath) as? PostTableViewCell {
-                //cell.feedLabel.text = sortedFeedPosts[indexPath.item]
-                 return postCell
+            if let postCell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell", for: indexPath) as? ProfileTableViewCell {
+                let post = curUser.feedPosts[indexPath.item]
+                postCell.smallText.text = post.quote.line
+                postCell.date.text = post.time.description
+                return postCell
             }
             return UITableViewCell()
         default:
-            if let favoritesCell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell", for: indexPath) as? FavoritesTableViewCell {
+            if let favoritesCell = tableView.dequeueReusableCell(withIdentifier: "profileTableCell", for: indexPath) as? ProfileTableViewCell {
                 //cell.feedLabel.text = self.favoriteQuotes[indexPath.item]
+                let favorites = curUser.favoriteQuotes[indexPath.item]
+                favoritesCell.smallText.text = favorites.line
                 return favoritesCell
             }
             return UITableViewCell()
