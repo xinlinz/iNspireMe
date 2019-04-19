@@ -20,6 +20,7 @@ class UserProfileViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         username.text = curUser.username
         quote.text = curUser.quote
+        self.navigationItem.setHidesBackButton(true, animated:true);
     }
     // TODO: pass on the current logged in user
     
