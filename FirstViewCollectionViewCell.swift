@@ -10,4 +10,5 @@ import UIKit
 class FirstViewCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var moodName: UILabel!
+    
 }
