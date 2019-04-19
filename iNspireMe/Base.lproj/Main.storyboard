@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="iNspireMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="PJ7-8X-Ngb"/>
                     <connections>
                         <outlet property="firstViewCollectionView" destination="bes-ju-jcj" id="oq1-BE-DM3"/>
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-977" y="596"/>
+            <point key="canvasLocation" x="302" y="-902"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -122,14 +122,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-281" y="595"/>
+            <point key="canvasLocation" x="1121" y="-902"/>
         </scene>
         <!--First Tab Navigation Controller-->
         <scene sceneID="XA5-p8-XMY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t8S-XA-bgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="ZLb-0r-Zcz" userLabel="First Tab Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menu" id="SHA-m4-SA6"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="SHA-m4-SA6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9iG-i1-8nB">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -138,17 +137,19 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="liz-Lg-Urc"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8S-XA-bgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="-205"/>
+            <point key="canvasLocation" x="-484" y="-902"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.59482187032699585" green="0.79217106103897095" blue="0.91742157936096191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="ZLb-0r-Zcz" kind="relationship" relationship="viewControllers" id="q8r-Ak-yOA"/>
@@ -158,13 +159,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="-898"/>
+            <point key="canvasLocation" x="-1681" y="-19"/>
         </scene>
         <!--Second Tab Navigation Controller-->
         <scene sceneID="A8n-Xl-Kqe">
             <objects>
                 <navigationController id="0wa-q0-R11" userLabel="Second Tab Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" id="Y88-I7-dkW" userLabel="Feed"/>
+                    <tabBarItem key="tabBarItem" title="" image="social" id="Y88-I7-dkW" userLabel="Feed"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W40-Na-xjX">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -175,7 +176,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pb-oi-Uih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="-164"/>
+            <point key="canvasLocation" x="-484" y="-191"/>
         </scene>
         <!--Third-->
         <scene sceneID="NeT-bb-dGY">
@@ -191,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4t-ru-gFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="614"/>
+            <point key="canvasLocation" x="302" y="-191"/>
         </scene>
         <!--LoginRegister-->
         <scene sceneID="iRM-wI-LV3">
@@ -310,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtX-7g-guq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="613"/>
+            <point key="canvasLocation" x="302" y="515"/>
         </scene>
         <!--Profile-->
         <scene sceneID="VjR-px-62n">
@@ -448,13 +449,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kYs-mn-gKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2873" y="613"/>
+            <point key="canvasLocation" x="1121" y="514"/>
         </scene>
-        <!--Profile-->
+        <!--Navigation Controller-->
         <scene sceneID="6JV-ox-3ax">
             <objects>
                 <navigationController id="JJt-b2-RV3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="profile" id="58J-Mr-7tW" userLabel="Profile"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile" id="58J-Mr-7tW" userLabel="Profile"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KwR-TY-HE9">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -465,14 +466,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwD-GO-1Aw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2097" y="-164"/>
+            <point key="canvasLocation" x="-484" y="515"/>
         </scene>
     </scenes>
     <resources>
         <image name="bg" width="275" height="183"/>
-        <image name="first" width="30" height="30"/>
         <image name="guest" width="720" height="720"/>
-        <image name="profile" width="32" height="32"/>
+        <image name="home" width="25" height="25"/>
+        <image name="profile" width="25" height="25"/>
         <image name="second" width="30" height="30"/>
+        <image name="social" width="25" height="25"/>
     </resources>
 </document>
