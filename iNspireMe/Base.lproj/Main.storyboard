@@ -36,7 +36,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="162" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfJ-cc-CU2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfJ-cc-CU2" userLabel="moodName">
                                                     <rect key="frame" x="20" y="17" width="122" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -46,7 +46,7 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="moodName" destination="pfJ-cc-CU2" id="A0O-ri-FQV"/>
+                                            <outlet property="moodName" destination="pfJ-cc-CU2" id="iFd-Dh-M6d"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -61,7 +61,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="firstViewCollectionView" destination="V57-5n-ArN" id="prR-mR-QAS"/>
+                        <outlet property="firstViewCollectionView" destination="V57-5n-ArN" id="x5e-nb-2u9"/>
                         <outlet property="topImage" destination="O9f-kt-vYc" id="2Ek-ZF-H9w"/>
                         <segue destination="8rJ-Kc-sve" kind="show" identifier="firstToSecondView" id="Vwi-VJ-PJ6"/>
                     </connections>

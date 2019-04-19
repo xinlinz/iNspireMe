@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var moods = ["happy", "angry", "confused", "inspired", "sad"]
     var selectedMoodinCollectionView: String!
@@ -20,17 +20,21 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("1")
         firstViewCollectionView.delegate = self
         firstViewCollectionView.dataSource = self
+        print("2")
         topImage.image = UIImage(named: "bg")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("3")
         return moods.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? FirstViewCollectionViewCell {
+            print("4")
             cell.moodName.text = moods[indexPath.item]
            return cell
         }
