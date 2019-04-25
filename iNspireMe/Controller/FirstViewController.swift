@@ -20,24 +20,19 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print("1")
         firstViewCollectionView.delegate = self
         firstViewCollectionView.dataSource = self
-        print("2")
         topImage.image = UIImage(named: "bg")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("3")
         return moods.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("here")
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? FirstViewCollectionViewCell {
-            print("4")
             cell.moodName.text = self.moods[indexPath.item]
-            print("5")
             return cell
         }
 //        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? FirstViewCollectionViewCell {
@@ -58,7 +53,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        print("6")
         if let dest = segue.destination as? SecondViewController {
             dest.selectedMood = selectedMoodinCollectionView
         }

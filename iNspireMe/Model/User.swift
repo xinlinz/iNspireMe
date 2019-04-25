@@ -76,8 +76,8 @@ class User: Equatable {
         return self.friends
     }
     
-    func makeFeedPost(t: Date, q: Quote) {
-        let feedpost: FeedPost = FeedPost(user: self, time: t, quote: q)
+    func makeFeedPost(t: Date, q: Quote, m: Mood) {
+        let feedpost: FeedPost = FeedPost(user: self, time: t, quote: q, mood: m)
         self.feedPosts.append(feedpost)
     }
     

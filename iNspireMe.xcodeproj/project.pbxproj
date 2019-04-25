@@ -12,6 +12,8 @@
 		B1D60A0022694E4200AE27E5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D609FF22694E4100AE27E5 /* SecondViewController.swift */; };
 		B1D60A052269527300AE27E5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D60A032269527300AE27E5 /* FirstViewController.swift */; };
 		D621135722695746001770ED /* FirstViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D621135622695746001770ED /* FirstViewCollectionViewCell.swift */; };
+		D64DA82422717DE400AE08DE /* SocialFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DA82322717DE400AE08DE /* SocialFeedViewController.swift */; };
+		D64DA8262271802400AE08DE /* SocialFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DA8252271802400AE08DE /* SocialFeedViewCell.swift */; };
 		D682B5982249E1F8006DE7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682B5972249E1F8006DE7C5 /* AppDelegate.swift */; };
 		D682B59F2249E1F8006DE7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D682B59D2249E1F8006DE7C5 /* Main.storyboard */; };
 		D682B5A12249E1F9006DE7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D682B5A02249E1F9006DE7C5 /* Assets.xcassets */; };
@@ -32,7 +34,9 @@
 		894568BFFFB8A612DDF8F987 /* Pods-iNspireMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iNspireMe.release.xcconfig"; path = "Target Support Files/Pods-iNspireMe/Pods-iNspireMe.release.xcconfig"; sourceTree = "<group>"; };
 		B1D609FF22694E4100AE27E5 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B1D60A032269527300AE27E5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D621135622695746001770ED /* FirstViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstViewCollectionViewCell.swift; path = ../../FirstViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		D621135622695746001770ED /* FirstViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstViewCollectionViewCell.swift; path = "Mood Menu/FirstViewCollectionViewCell.swift"; sourceTree = "<group>"; };
+		D64DA82322717DE400AE08DE /* SocialFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedViewController.swift; sourceTree = "<group>"; };
+		D64DA8252271802400AE08DE /* SocialFeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedViewCell.swift; sourceTree = "<group>"; };
 		D682B5942249E1F8006DE7C5 /* iNspireMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iNspireMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D682B5972249E1F8006DE7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D682B59E2249E1F8006DE7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				D621135622695746001770ED /* FirstViewCollectionViewCell.swift */,
 				B1D60A032269527300AE27E5 /* FirstViewController.swift */,
 				B1D609FF22694E4100AE27E5 /* SecondViewController.swift */,
+				D64DA82322717DE400AE08DE /* SocialFeedViewController.swift */,
+				D64DA8252271802400AE08DE /* SocialFeedViewCell.swift */,
 				D6C8B839225EC26C0050D7CC /* LoginRegisterViewController.swift */,
 				09C7ACE62268E7C800C5F65B /* UserProfileViewController.swift */,
 				D6EEF2A5226948F300ABDF0D /* ProfileTableViewCell.swift */,
@@ -279,7 +285,9 @@
 				D6C8B83A225EC26C0050D7CC /* LoginRegisterViewController.swift in Sources */,
 				D682B5982249E1F8006DE7C5 /* AppDelegate.swift in Sources */,
 				D6C8B836225EB49A0050D7CC /* FeedPost.swift in Sources */,
+				D64DA8262271802400AE08DE /* SocialFeedViewCell.swift in Sources */,
 				D6AC840522669BAB008E0A5B /* LogInTextField.swift in Sources */,
+				D64DA82422717DE400AE08DE /* SocialFeedViewController.swift in Sources */,
 				D621135722695746001770ED /* FirstViewCollectionViewCell.swift in Sources */,
 				09C7ACE72268E7C800C5F65B /* UserProfileViewController.swift in Sources */,
 				D6C8B83C225ECF870050D7CC /* Mood.swift in Sources */,

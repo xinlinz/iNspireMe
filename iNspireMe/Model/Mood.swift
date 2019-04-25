@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Mood.swift
 //  iNspireMe
 //
 //  Created by Xinlin Zhou on 4/10/19.
@@ -13,5 +13,10 @@ class Mood {
     
     init(mood: String){
         self.mood = mood
+    }
+    
+    init(mood: String, quotes: [Quote]){
+        self.mood = mood
+        self.quotes = quotes
     }
 }
