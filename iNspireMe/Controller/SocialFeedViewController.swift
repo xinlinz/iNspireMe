@@ -50,6 +50,10 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        curUser = UserProfileViewController.user
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.feedPosts.count
     }
@@ -64,8 +68,8 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func makePost() {
         
         let line = String(makePostQuoteLineLabel.text!)
-        let image = makePostQuotePhotoLabel as UIImage
-        self.makePostQuote = Quote(l: line, image: image)
+        //let image = makePostQuotePhotoLabel as UIImage
+        self.makePostQuote = Quote(l: line)
         
         let moodAsString = String(makePostMoodsLabel.text!)
         
@@ -73,19 +77,34 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
             print("Cannot make post if not logged in (or not all fields filled in).")
         }
         
+        var newFeedPost: FeedPost!
+        
         if (self.moods.contains(moodAsString)) {
+            print("here81")
             let docRef = db.collection("moods").document(moodAsString)
+            print(docRef.path)
             docRef.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    let quotes = document.get("quotes") as! [Quote]
+                    print("line86")
+                    let quotes = document.get("quotes") as! [Int]
+                    print(quotes.description)
                     self.makePostMood = Mood(mood: moodAsString, quotes: quotes)
+                    newFeedPost = FeedPost(user: self.curUser, time: Date(), quote: self.makePostQuote, mood: self.makePostMood)
+                } else {
+                    print("lined90")
                 }
             }
+            print("line94")
         } else {
             print("Mood category could not be found.")
         }
         
-        let newFeedPost = FeedPost(user: self.curUser, time: Date(), quote: self.makePostQuote, mood: self.makePostMood)
+        print(self.curUser)
+        print(Date())
+        print(self.makePostQuote)
+        print(self.makePostMood)
+        
+//        let newFeedPost = FeedPost(user: self.curUser, time: Date(), quote: self.makePostQuote, mood: self.makePostMood)
         
         // write to DB
         db.collection("feed posts").document(String(newFeedPost.hashValue)).setData(newFeedPost.convertToDictionary())  { err in

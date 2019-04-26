@@ -15,6 +15,7 @@ class FeedPost: Equatable, Hashable {
     var time: Date!
     var quote: Quote
     var mood: Mood
+    
     var hashValue: Int {
         return user.username.hashValue ^ time.hashValue
     }

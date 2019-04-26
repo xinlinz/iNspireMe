@@ -19,6 +19,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var data = Data()
         // Do any additional setup after loading the view, typically from a nib.
         firstViewCollectionView.delegate = self
         firstViewCollectionView.dataSource = self

@@ -9,18 +9,22 @@
 import UIKit
 import Foundation
 
+
 class UserProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var toggleButton: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var quote: UILabel!
     
+    
     var curUser: User!
+    static var user: User!
     
     override func viewDidLoad() {
         username.text = curUser.username
         quote.text = curUser.quote
         self.navigationItem.setHidesBackButton(true, animated:true);
+        UserProfileViewController.user = curUser
     }
     // TODO: pass on the current logged in user
     

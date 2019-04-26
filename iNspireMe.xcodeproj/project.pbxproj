@@ -19,6 +19,7 @@
 		D682B5A12249E1F9006DE7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D682B5A02249E1F9006DE7C5 /* Assets.xcassets */; };
 		D682B5A42249E1F9006DE7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D682B5A22249E1F9006DE7C5 /* LaunchScreen.storyboard */; };
 		D6AC840522669BAB008E0A5B /* LogInTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AC840422669BAB008E0A5B /* LogInTextField.swift */; };
+		D6B47BFA2272880700B6CE7B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B47BF92272880700B6CE7B /* Data.swift */; };
 		D6C8B832225EB3CA0050D7CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B831225EB3CA0050D7CC /* User.swift */; };
 		D6C8B834225EB48E0050D7CC /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B833225EB48E0050D7CC /* Quote.swift */; };
 		D6C8B836225EB49A0050D7CC /* FeedPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8B835225EB49A0050D7CC /* FeedPost.swift */; };
@@ -44,6 +45,7 @@
 		D682B5A32249E1F9006DE7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D682B5A52249E1F9006DE7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6AC840422669BAB008E0A5B /* LogInTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInTextField.swift; sourceTree = "<group>"; };
+		D6B47BF92272880700B6CE7B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D6C8B831225EB3CA0050D7CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D6C8B833225EB48E0050D7CC /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		D6C8B835225EB49A0050D7CC /* FeedPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPost.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				D6C8B833225EB48E0050D7CC /* Quote.swift */,
 				D6C8B835225EB49A0050D7CC /* FeedPost.swift */,
 				D6C8B83B225ECF870050D7CC /* Mood.swift */,
+				D6B47BF92272880700B6CE7B /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C8B832225EB3CA0050D7CC /* User.swift in Sources */,
+				D6B47BFA2272880700B6CE7B /* Data.swift in Sources */,
 				D6EEF2A6226948F300ABDF0D /* ProfileTableViewCell.swift in Sources */,
 				D6C8B83A225EC26C0050D7CC /* LoginRegisterViewController.swift in Sources */,
 				D682B5982249E1F8006DE7C5 /* AppDelegate.swift in Sources */,

@@ -13,9 +13,17 @@ class Quote: Equatable {
     var line: String!
     var photo: UIImage!
     
+    init(l: String) {
+        self.line = l
+    }
+    
     init (l: String, image: UIImage) {
         self.line = l
         self.photo = image
+    }
+    
+    var hashValue: Int {
+        return line.hashValue
     }
     
     static func == (lhs: Quote, rhs: Quote) -> Bool {

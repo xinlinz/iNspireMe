@@ -9,14 +9,23 @@
 import Foundation
 class Mood {
     var mood: String!
-    var quotes = [Quote]()
+    var quotes = [Int]()
     
     init(mood: String){
         self.mood = mood
     }
     
-    init(mood: String, quotes: [Quote]){
+    init(mood: String, quotes: [Int]){
         self.mood = mood
         self.quotes = quotes
     }
+    
+    func convertToDictionary() -> [String: Any] {
+        var retDictionary = [String: Any]()
+        
+        retDictionary["quotes"] = self.quotes
+        
+        return retDictionary
+    }
+    
 }
