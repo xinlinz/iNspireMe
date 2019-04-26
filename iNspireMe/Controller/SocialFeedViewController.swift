@@ -17,7 +17,7 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     var moods = ["happy", "angry", "confused", "inspired", "sad"]
     
     var feedPosts: [FeedPost] = []
-    let db = Firestore.firestore()
+    //let db = Firestore.firestore()
     
     @IBOutlet weak var makePostQuoteLineLabel: UITextField!
     @IBOutlet weak var makePostQuotePhotoLabel: UIImage!
