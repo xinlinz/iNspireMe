@@ -109,20 +109,20 @@
                                     <constraint firstItem="hpm-Me-0ac" firstAttribute="centerX" secondItem="yLi-RZ-yLT" secondAttribute="centerX" id="kq1-Rl-HmG"/>
                                 </constraints>
                             </scrollView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FIc-Xv-4uj">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FIc-Xv-4uj">
                                 <rect key="frame" x="0.0" y="566.66666666666663" width="375" height="162.33333333333337"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVz-et-TWh">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVz-et-TWh">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="162.33333333333334"/>
-                                        <state key="normal" title="Prev"/>
+                                        <state key="normal" image="prev"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUF-Bm-d1q">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUF-Bm-d1q">
                                         <rect key="frame" x="125" y="0.0" width="125" height="162.33333333333334"/>
-                                        <state key="normal" title="Pause/Play"/>
+                                        <state key="normal" title="Pause/Play" image="pause"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYD-aC-joc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYD-aC-joc">
                                         <rect key="frame" x="250" y="0.0" width="125" height="162.33333333333334"/>
-                                        <state key="normal" title="Next"/>
+                                        <state key="normal" title="Next" image="next"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -601,6 +601,9 @@
         <image name="bg" width="275" height="183"/>
         <image name="guest" width="720" height="720"/>
         <image name="home" width="25" height="25"/>
+        <image name="next" width="128" height="128"/>
+        <image name="pause" width="128" height="128"/>
+        <image name="prev" width="128" height="128"/>
         <image name="profile" width="25" height="25"/>
         <image name="second" width="30" height="30"/>
         <image name="social" width="25" height="25"/>
