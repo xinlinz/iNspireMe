@@ -80,6 +80,36 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
         var newFeedPost: FeedPost!
         
         if (self.moods.contains(moodAsString)) {
+            
+            /*docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    print("line86")
+                    //let quotes = document.get("quotes") as! [Int]
+                    //print(quotes.description)
+                    //self.makePostMood = Mood(mood: moodAsString, quotes: quotes)
+                    self.makePostMood = Mood(mood: moodAsString)
+                    post = FeedPost(user: self.curUser, time: Date(), quote: self.makePostQuote, mood: self.makePostMood)
+                    print("created post")
+                } else {
+                    print("lined90")
+                }
+            }*/
+            newFeedPost = makeFeedPost(moodAsString: moodAsString)
+            print("line94")
+        } else {
+            print("Mood category could not be found.")
+        }
+        
+        newFeedPost = makeFeedPost(moodAsString: moodAsString)
+        
+        if (newFeedPost != nil) {
+            print("is nil")
+            return
+        }
+        
+        print("got the post")
+        
+        /*if (self.moods.contains(moodAsString)) {
             print("here81")
             let docRef = db.collection("moods").document(moodAsString)
             print(docRef.path)
@@ -97,12 +127,12 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
             print("line94")
         } else {
             print("Mood category could not be found.")
-        }
+        }*/
         
-        print(self.curUser)
-        print(Date())
-        print(self.makePostQuote)
-        print(self.makePostMood)
+        //print(self.curUser)
+        //print(Date())
+        //print(self.makePostQuote)
+        //print(self.makePostMood)
         
 //        let newFeedPost = FeedPost(user: self.curUser, time: Date(), quote: self.makePostQuote, mood: self.makePostMood)
         
@@ -116,6 +146,29 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         self.feedPosts.append(newFeedPost)
+    }
+    
+    func makeFeedPost(moodAsString: String) -> FeedPost? {
+        
+        var post: FeedPost? = nil
+        
+        print("here81")
+        let docRef = db.collection("moods").document(moodAsString)
+        print(docRef.path)
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                print("line86")
+                //let quotes = document.get("quotes") as! [Int]
+                //print(quotes.description)
+                //self.makePostMood = Mood(mood: moodAsString, quotes: quotes)
+                self.makePostMood = Mood(mood: moodAsString)
+                post = FeedPost(user: self.curUser, time: Date(), quote: self.makePostQuote, mood: self.makePostMood)
+                print("created post")
+            } else {
+                print("lined90")
+            }
+        }
+        return post
     }
     
 }
