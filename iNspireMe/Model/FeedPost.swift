@@ -17,7 +17,7 @@ class FeedPost: Equatable, Hashable {
     var mood: Mood
     
     var hashValue: Int {
-        return user.username.hashValue ^ time.hashValue
+        return user.username.hashValue ^ time.hashValue ^ quote.hashValue
     }
     
     init (user: User, time: Date, quote: Quote, mood: Mood) {
@@ -34,10 +34,10 @@ class FeedPost: Equatable, Hashable {
     func convertToDictionary() -> [String: Any] {
         var retDictionary = [String: Any]()
         
-        retDictionary["user"] = self.user
+        retDictionary["user"] = self.user.username
         retDictionary["time"] = self.time
-        retDictionary["quote"] = self.quote
-        retDictionary["mood"] = self.mood
+        retDictionary["quote"] = self.quote.hashValue
+        retDictionary["mood"] = self.mood.quotes.hashValue
         
         return retDictionary
     }

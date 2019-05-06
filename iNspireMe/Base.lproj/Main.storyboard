@@ -224,7 +224,7 @@
                                 <rect key="frame" x="9.3333333333333428" y="196" width="356.33333333333326" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="94" id="Ip2-Kv-pVr" customClass="SocialFeedViewCell" customModule="iNspireMe" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="socialFeedPost" rowHeight="94" id="Ip2-Kv-pVr" customClass="SocialFeedViewCell" customModule="iNspireMe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="356.33333333333326" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ip2-Kv-pVr" id="l2p-oM-kt7">
@@ -271,6 +271,11 @@
                                         <constraints>
                                             <constraint firstItem="Qtx-jh-Rxs" firstAttribute="leading" secondItem="Ip2-Kv-pVr" secondAttribute="leading" constant="93" id="aKC-va-Pca"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="date" destination="xCy-Nv-TP0" id="7FV-71-7vh"/>
+                                            <outlet property="quote" destination="PF0-Lu-2KZ" id="g8U-72-XRA"/>
+                                            <outlet property="username" destination="Qtx-jh-Rxs" id="9Ms-gn-NAE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

@@ -10,6 +10,10 @@ import UIKit
 
 class SocialFeedViewCell: UITableViewCell {
     
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var quote: UITextField!
+    @IBOutlet weak var date: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

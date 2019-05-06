@@ -16,6 +16,7 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var moods = ["happy", "angry", "confused", "inspired", "sad"]
     
+//    let data = Data()
     var feedPosts: [FeedPost] = []
     //let db = Firestore.firestore()
     
@@ -30,25 +31,72 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let q1 = Quote(l: "q1")
+        let q2 = Quote(l: "q2")
+        let q3 = Quote(l: "q3")
+        let mood = Mood(mood: "angry")
+        let p1 = FeedPost(user: User(username: "Mallory", password: "Mallory"), time: Date(), quote: q1, mood: mood)
+        let p2 = FeedPost(user: User(username: "Mallory", password: "Mallory"), time: Date(), quote: q2, mood: mood)
+        let p3 = FeedPost(user: User(username: "Mallory", password: "Mallory"), time: Date(), quote: q3, mood: mood)
+        self.feedPosts = [p1, p2, p3]
+//        self.feedPosts = [data.p1, data.p2, data.p3]
         // Do any additional setup after loading the view, typically from a nib.
         //send data to the firebase to get back the enteries.
-        db.collection("feed posts").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    let user = document.get("user")
-                    let time = document.get("time")
-                    let quote = document.get("quote")
-                    let mood = document.get("mood")
-                    let feedPost = FeedPost(user: user as! User, time: time as! Date, quote: quote as! Quote, mood: mood as! Mood)
-                    self.feedPosts.append(feedPost)
-                }
-            }
-        }
+//        db.collection("feed posts").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                    let userHash = document.get("user")
+//                    let time = document.get("time")
+//                    let quoteHash = document.get("quote")
+//                    let moodhash = document.get("mood")
+//                    let feedPost = self.findHashInfo(userHash: userHash as! String, quoteHash: quoteHash as! String, moodHash: moodhash as! String, time: time as! Date)
+//                    self.feedPosts.append(feedPost)
+//                }
+//            }
+//        }
         
     }
+    
+//    func findHashInfo(userHash: String, quoteHash: String, moodHash: String, time: Date) -> FeedPost {
+//        var user: User? = nil
+//        var quote: Quote? = nil
+//        var mood: Mood? = nil
+//
+//        let userDocRef = db.collection("users").document(userHash)
+//        userDocRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                user = document
+//                // TODO: perform segue to user profile
+//
+//            }
+//
+//        let quoteDocRef = db.collection("quotes").document(quoteHash)
+//        db.collection("quotes").getDocuments(source: quoteHash) { (quoteCollection, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                for document in quoteCollection!.documents {
+//                    quote = document.get(quoteHash) as? Quote
+//                }
+//            }
+//        }
+//
+//        db.collection("moods").getDocuments(moodHash) { (quoteCollection, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                for document in quoteCollection!.documents {
+//                    mood = document.get(quoteHash) as? Mood
+//                }
+//            }
+//        }
+//
+//        let feedPost = FeedPost(user: user as! User, time: time , quote: quote as! Quote, mood: mood as! Mood)
+//        return feedPost
+//    }
     
     override func viewDidAppear(_ animated: Bool) {
         curUser = UserProfileViewController.user
@@ -60,6 +108,11 @@ class SocialFeedViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let feedPostCell = tableView.dequeueReusableCell(withIdentifier: "socialFeedPost", for: indexPath) as? SocialFeedViewCell {
+            
+            feedPostCell.date.text = self.feedPosts[indexPath.item].time.description
+            feedPostCell.quote.text = self.feedPosts[indexPath.item].quote.line
+            feedPostCell.username.text = self.feedPosts[indexPath.item].user.username
+            
             return feedPostCell
         }
         return UITableViewCell()
